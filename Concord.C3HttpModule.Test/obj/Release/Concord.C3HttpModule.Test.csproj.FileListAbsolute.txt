@@ -1,7 +1,0 @@
-C:\Users\CONCORD-D1\Desktop\Artifacts\log4net.config
-C:\Users\CONCORD-D1\Desktop\Artifacts\Concord.C3HttpModule.Test.exe.config
-C:\Users\CONCORD-D1\Desktop\Artifacts\Concord.C3HttpModule.Test.exe
-C:\Users\CONCORD-D1\Desktop\Artifacts\Concord.C3HttpModule.Test.pdb
-C:\Users\CONCORD-D1\Desktop\TestJob1\concord.c3httpmodule\Concord.C3HttpModule.Test\obj\Release\Concord.C3HttpModule.Test.csprojResolveAssemblyReference.cache
-C:\Users\CONCORD-D1\Desktop\TestJob1\concord.c3httpmodule\Concord.C3HttpModule.Test\obj\Release\Concord.C3HttpModule.Test.exe
-C:\Users\CONCORD-D1\Desktop\TestJob1\concord.c3httpmodule\Concord.C3HttpModule.Test\obj\Release\Concord.C3HttpModule.Test.pdb
