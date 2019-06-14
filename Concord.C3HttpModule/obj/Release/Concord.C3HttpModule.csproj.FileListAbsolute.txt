@@ -1,5 +1,0 @@
-D:\Temp\C3HttpModuleCheckout\Trunk\bin\Release\Concord.C3HttpModule.dll
-D:\Temp\C3HttpModuleCheckout\Trunk\bin\Release\Concord.C3HttpModule.pdb
-D:\Temp\C3HttpModuleCheckout\Trunk\Src\Concord.C3HttpModule\obj\Release\Concord.C3HttpModule.csprojResolveAssemblyReference.cache
-D:\Temp\C3HttpModuleCheckout\Trunk\Src\Concord.C3HttpModule\obj\Release\Concord.C3HttpModule.dll
-D:\Temp\C3HttpModuleCheckout\Trunk\Src\Concord.C3HttpModule\obj\Release\Concord.C3HttpModule.pdb

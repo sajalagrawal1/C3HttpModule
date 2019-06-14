@@ -1,9 +1,0 @@
-D:\Temp\C3HttpModuleCheckout\Trunk\bin\Debug\log4net.config
-D:\Temp\C3HttpModuleCheckout\Trunk\bin\Debug\Concord.C3HttpModule.Test.exe.config
-D:\Temp\C3HttpModuleCheckout\Trunk\bin\Debug\Concord.C3HttpModule.Test.exe
-D:\Temp\C3HttpModuleCheckout\Trunk\bin\Debug\Concord.C3HttpModule.Test.pdb
-D:\Temp\C3HttpModuleCheckout\Trunk\Src\Concord.C3HttpModule.Test\obj\Debug\Concord.C3HttpModule.Test.csprojAssemblyReference.cache
-D:\Temp\C3HttpModuleCheckout\Trunk\Src\Concord.C3HttpModule.Test\obj\Debug\Concord.C3HttpModule.Test.csproj.CoreCompileInputs.cache
-D:\Temp\C3HttpModuleCheckout\Trunk\Src\Concord.C3HttpModule.Test\obj\Debug\Concord.C3HttpModule.Test.csproj.CopyComplete
-D:\Temp\C3HttpModuleCheckout\Trunk\Src\Concord.C3HttpModule.Test\obj\Debug\Concord.C3HttpModule.Test.exe
-D:\Temp\C3HttpModuleCheckout\Trunk\Src\Concord.C3HttpModule.Test\obj\Debug\Concord.C3HttpModule.Test.pdb
