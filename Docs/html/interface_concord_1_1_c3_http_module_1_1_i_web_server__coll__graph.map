@@ -1,0 +1,3 @@
+<map id="Concord.C3HttpModule.IWebServer" name="Concord.C3HttpModule.IWebServer">
+<area shape="rect" id="node1" title="Public Interface for Web Server. Why? In case if in future the Module needs a factory implementation,..." alt="" coords="5,5,196,273"/>
+</map>

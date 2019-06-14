@@ -1,0 +1,5 @@
+<map id="Concord.C3HttpModule.HttpUrlList.AddUrl" name="Concord.C3HttpModule.HttpUrlList.AddUrl">
+<area shape="rect" id="node1" title="Adds Url and object of HttpResponseBuffer to ConcurrentDictionary" alt="" coords="260,39,444,80"/>
+<area shape="rect" id="node2" href="$class_concord_1_1_c3_http_module_1_1_web_server.html#a79c338f7db3623018d7886a96ce403b2" title="Method to add Url with expiry. e.g. AddUrlWithExpiry(&quot;test.html&quot;, &quot;C:\Temp.html&quot;,..." alt="" coords="15,5,202,47"/>
+<area shape="rect" id="node3" href="$class_concord_1_1_c3_http_module_1_1_web_server.html#a8f80aff8fba992ba935e92a29d5e7c43" title="Method to add Url with expiry. e.g. AddUrlWithExpiry(&quot;test.html&quot;, &quot;This is a response string...." alt="" coords="5,71,212,112"/>
+</map>

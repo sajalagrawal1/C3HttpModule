@@ -1,0 +1,5 @@
+<map id="Concord.C3HttpModule.HttpResponseBuffer.GetData" name="Concord.C3HttpModule.HttpResponseBuffer.GetData">
+<area shape="rect" id="node1" title="Api To Get Data of Buffer," alt="" coords="5,5,189,47"/>
+<area shape="rect" id="node2" href="$class_concord_1_1_c3_http_module_1_1_utilities.html#aadfb9271c63b98ed7754cfb8e07072e2" title="Utility method to wrap exception and all its inner exceptions to a string. Concats Message and Stack ..." alt="" coords="469,5,676,47"/>
+<area shape="rect" id="node3" href="$class_concord_1_1_c3_http_module_1_1_http_response_buffer.html#afa05ddc467a347089e0e0f5d7dea8a4c" title="If BufferType.BUFFER is set for the object it will write the content of buffer to file name (given in..." alt="" coords="237,35,421,76"/>
+</map>

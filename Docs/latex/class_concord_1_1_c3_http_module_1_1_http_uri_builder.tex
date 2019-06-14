@@ -1,0 +1,90 @@
+\hypertarget{class_concord_1_1_c3_http_module_1_1_http_uri_builder}{}\section{Concord.\+C3\+Http\+Module.\+Http\+Uri\+Builder Class Reference}
+\label{class_concord_1_1_c3_http_module_1_1_http_uri_builder}\index{Concord.C3HttpModule.HttpUriBuilder@{Concord.C3HttpModule.HttpUriBuilder}}
+
+
+This is a replacement to Dot Net class Uri Builder. Uri\+Builder was not accepting the $\ast$ as Host\+Name  
+
+
+
+
+Collaboration diagram for Concord.\+C3\+Http\+Module.\+Http\+Uri\+Builder\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{class_concord_1_1_c3_http_module_1_1_http_uri_builder__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_uri_builder_a6415279869c6a83068a99084b334c32c}{Uri\+String}} =$>$ string.\+Format(\char`\"{}\{0\}\+://\{1\}\{2\}\{3\}/\char`\"{}, \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_uri_builder_aec68ef1c873d7894850552ee9067119a}{Scheme}}, \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_uri_builder_aea098c21d58cb7c0f34dba606cee80fd}{Host}}, \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_uri_builder_adc628b6895d402e3f805cabafce8cb11}{Port}} == 0 ? string.\+Empty \+: \char`\"{}\+:\char`\"{}, \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_uri_builder_adc628b6895d402e3f805cabafce8cb11}{Port}} == 0 ? string.\+Empty \+: Convert.\+To\+String(\mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_uri_builder_adc628b6895d402e3f805cabafce8cb11}{Port}}))
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+ushort \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_uri_builder_adc628b6895d402e3f805cabafce8cb11}{Port}} = 80\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_uri_builder_aea098c21d58cb7c0f34dba606cee80fd}{Host}} = \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_constants_a3fe72e8bc32c96064538c8af8199c478}{Constants.\+A\+L\+L\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+ES}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_uri_builder_aec68ef1c873d7894850552ee9067119a}{Scheme}} = \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_constants_ad5d0cf769b25bef58e712036c67b915b}{Constants.\+H\+T\+T\+P\+\_\+\+S\+C\+H\+E\+ME}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is a replacement to Dot Net class Uri Builder. Uri\+Builder was not accepting the $\ast$ as Host\+Name 
+
+
+
+Definition at line 12 of file Http\+Uri\+Builder.\+cs.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_uri_builder_a6415279869c6a83068a99084b334c32c}\label{class_concord_1_1_c3_http_module_1_1_http_uri_builder_a6415279869c6a83068a99084b334c32c}} 
+\index{Concord.C3HttpModule.HttpUriBuilder@{Concord.C3HttpModule.HttpUriBuilder}!UriString@{UriString}}
+\index{UriString@{UriString}!Concord.C3HttpModule.HttpUriBuilder@{Concord.C3HttpModule.HttpUriBuilder}}
+\subsubsection{\texorpdfstring{UriString}{UriString}}
+{\footnotesize\ttfamily string Concord.\+C3\+Http\+Module.\+Http\+Uri\+Builder.\+Uri\+String =$>$ string.\+Format(\char`\"{}\{0\}\+://\{1\}\{2\}\{3\}/\char`\"{}, \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_uri_builder_aec68ef1c873d7894850552ee9067119a}{Scheme}}, \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_uri_builder_aea098c21d58cb7c0f34dba606cee80fd}{Host}}, \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_uri_builder_adc628b6895d402e3f805cabafce8cb11}{Port}} == 0 ? string.\+Empty \+: \char`\"{}\+:\char`\"{}, \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_uri_builder_adc628b6895d402e3f805cabafce8cb11}{Port}} == 0 ? string.\+Empty \+: Convert.\+To\+String(\mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_uri_builder_adc628b6895d402e3f805cabafce8cb11}{Port}}))}
+
+
+
+Definition at line 18 of file Http\+Uri\+Builder.\+cs.
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_uri_builder_aea098c21d58cb7c0f34dba606cee80fd}\label{class_concord_1_1_c3_http_module_1_1_http_uri_builder_aea098c21d58cb7c0f34dba606cee80fd}} 
+\index{Concord.C3HttpModule.HttpUriBuilder@{Concord.C3HttpModule.HttpUriBuilder}!Host@{Host}}
+\index{Host@{Host}!Concord.C3HttpModule.HttpUriBuilder@{Concord.C3HttpModule.HttpUriBuilder}}
+\subsubsection{\texorpdfstring{Host}{Host}}
+{\footnotesize\ttfamily string Concord.\+C3\+Http\+Module.\+Http\+Uri\+Builder.\+Host = \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_constants_a3fe72e8bc32c96064538c8af8199c478}{Constants.\+A\+L\+L\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+ES}}\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line 15 of file Http\+Uri\+Builder.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_uri_builder_adc628b6895d402e3f805cabafce8cb11}\label{class_concord_1_1_c3_http_module_1_1_http_uri_builder_adc628b6895d402e3f805cabafce8cb11}} 
+\index{Concord.C3HttpModule.HttpUriBuilder@{Concord.C3HttpModule.HttpUriBuilder}!Port@{Port}}
+\index{Port@{Port}!Concord.C3HttpModule.HttpUriBuilder@{Concord.C3HttpModule.HttpUriBuilder}}
+\subsubsection{\texorpdfstring{Port}{Port}}
+{\footnotesize\ttfamily ushort Concord.\+C3\+Http\+Module.\+Http\+Uri\+Builder.\+Port = 80\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line 14 of file Http\+Uri\+Builder.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_uri_builder_aec68ef1c873d7894850552ee9067119a}\label{class_concord_1_1_c3_http_module_1_1_http_uri_builder_aec68ef1c873d7894850552ee9067119a}} 
+\index{Concord.C3HttpModule.HttpUriBuilder@{Concord.C3HttpModule.HttpUriBuilder}!Scheme@{Scheme}}
+\index{Scheme@{Scheme}!Concord.C3HttpModule.HttpUriBuilder@{Concord.C3HttpModule.HttpUriBuilder}}
+\subsubsection{\texorpdfstring{Scheme}{Scheme}}
+{\footnotesize\ttfamily string Concord.\+C3\+Http\+Module.\+Http\+Uri\+Builder.\+Scheme = \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_constants_ad5d0cf769b25bef58e712036c67b915b}{Constants.\+H\+T\+T\+P\+\_\+\+S\+C\+H\+E\+ME}}\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line 16 of file Http\+Uri\+Builder.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_http_uri_builder_8cs}{Http\+Uri\+Builder.\+cs}}\end{DoxyCompactItemize}

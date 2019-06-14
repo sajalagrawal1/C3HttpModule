@@ -1,0 +1,8 @@
+<map id="Concord.C3HttpModule.HttpResponseBuffer.HttpResponseBuffer" name="Concord.C3HttpModule.HttpResponseBuffer.HttpResponseBuffer">
+<area shape="rect" id="node1" title="Constructor" alt="" coords="5,103,237,144"/>
+<area shape="rect" id="node2" href="$class_concord_1_1_c3_http_module_1_1_utilities.html#a38d22d17b3554cf5064b7b4a9e5dbef0" title="Two directories as a string are passed. One is Root Path and another is cacheName...." alt="" coords="285,37,492,79"/>
+<area shape="rect" id="node5" href="$class_concord_1_1_c3_http_module_1_1_utilities.html#aadfb9271c63b98ed7754cfb8e07072e2" title="Utility method to wrap exception and all its inner exceptions to a string. Concats Message and Stack ..." alt="" coords="285,103,492,144"/>
+<area shape="rect" id="node6" href="$class_concord_1_1_c3_http_module_1_1_http_response_buffer.html#a29b2c2d2262cb331fe0f18e1dd930b5e" title="This method updates the time out, internally from the constructor and externally called when value of..." alt="" coords="285,168,492,209"/>
+<area shape="rect" id="node3" href="$class_concord_1_1_c3_http_module_1_1_utilities.html#a5c66ffbfd1a9f0723be7b7163ce9f778" title="Returns a clean unix url. Converts multiple slashes to one slash. Removes leading slash." alt="" coords="540,5,747,47"/>
+<area shape="rect" id="node4" href="$class_concord_1_1_c3_http_module_1_1_utilities.html#a40b3b3a642c04aacdbcf766ea049313d" title="Converts slashes to back slashes in a path. Blindly replaces / to . Suggested that it should be used ..." alt="" coords="540,71,747,112"/>
+</map>

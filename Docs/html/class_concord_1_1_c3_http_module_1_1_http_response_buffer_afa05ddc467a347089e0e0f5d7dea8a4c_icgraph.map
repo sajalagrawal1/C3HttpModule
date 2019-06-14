@@ -1,0 +1,7 @@
+<map id="Concord.C3HttpModule.HttpResponseBuffer.URLtoPath" name="Concord.C3HttpModule.HttpResponseBuffer.URLtoPath">
+<area shape="rect" id="node1" title="If BufferType.BUFFER is set for the object it will write the content of buffer to file name (given in..." alt="" coords="941,5,1125,47"/>
+<area shape="rect" id="node2" href="$class_concord_1_1_c3_http_module_1_1_http_response_buffer.html#a78e479ce9315db0f118145e814926b48" title="Api To Get Data of Buffer," alt="" coords="709,5,893,47"/>
+<area shape="rect" id="node3" href="$class_concord_1_1_c3_http_module_1_1_web_server.html#a406b1bfca1b92cedbfb0bdb792ae275f" title="Gets the response in string from HttpResponseBuffer." alt="" coords="475,5,661,47"/>
+<area shape="rect" id="node4" href="$class_concord_1_1_c3_http_module_1_1_web_server.html#ac9786f7a42e9d04a8c8bda5ff7caa482" title="Send Response is the method registered in HttpResponseContext to get the response,..." alt="" coords="240,5,427,47"/>
+<area shape="rect" id="node5" href="$class_concord_1_1_c3_http_module_1_1_web_server.html#a1f9e775ee54aa91662039d7f1a549193" title="Private Constructor." alt="" coords="5,5,192,47"/>
+</map>

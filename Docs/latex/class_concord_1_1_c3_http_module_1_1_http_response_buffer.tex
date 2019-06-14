@@ -1,0 +1,386 @@
+\hypertarget{class_concord_1_1_c3_http_module_1_1_http_response_buffer}{}\section{Concord.\+C3\+Http\+Module.\+Http\+Response\+Buffer Class Reference}
+\label{class_concord_1_1_c3_http_module_1_1_http_response_buffer}\index{Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}}
+
+
+Collaboration diagram for Concord.\+C3\+Http\+Module.\+Http\+Response\+Buffer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{class_concord_1_1_c3_http_module_1_1_http_response_buffer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a34a310395d4f4472b24cf6da3fc3ab82}{Buffer\+Type}} \{ \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a34a310395d4f4472b24cf6da3fc3ab82a9fc5887c030f7a3e19821ebec457e719}{Buffer\+Type.\+F\+I\+LE}}, 
+\mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a34a310395d4f4472b24cf6da3fc3ab82a17de626bcae5109bb2f7a66dfc4a8a1d}{Buffer\+Type.\+B\+U\+F\+F\+ER}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumerator to define response buffer type, File or Buffer (a buffer is simply a string). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer_ad257bda222318401c41e4a9465e3ed84}{Http\+Response\+Buffer}} (\mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a34a310395d4f4472b24cf6da3fc3ab82}{Buffer\+Type}} type, string value, long time\+Out, string cache\+Name)
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a29b2c2d2262cb331fe0f18e1dd930b5e}{Update\+Time\+Out}} ()
+\begin{DoxyCompactList}\small\item\em This method updates the time out, internally from the constructor and externally called when value of Virtual\+U\+R\+L\+Life\+Span changes. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a78e479ce9315db0f118145e814926b48}{Get\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Api To Get Data of Buffer, \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer_abfe159e6516c39e5ad77bdac8350f09b}{Extend\+Expiry\+Time}} (long seconds)
+\begin{DoxyCompactList}\small\item\em Called from Poke\+Url\+With\+Expiry. Extends expiry time of the object by \textquotesingle{}seconds\textquotesingle{}. Also, updates Time\+Out of the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a4d61d781c5b28fa7969cbf0fd9ce4720}{Extend\+Expiry\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Called from Poke\+Url. Extends expiry time of the object by Time\+Out seconds. But does not update Time\+Out of the object. It uses Time\+Out seconds. So the new timeout/expiry time will be Time\+Out plus Current\+Time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+long \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer_adf6f6e182181150ba1dd0c67c15483a0}{Time\+Out}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Resoure time out, in seconds. The resource should not be served after Time\+Out seconds. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a34a310395d4f4472b24cf6da3fc3ab82}{Buffer\+Type}} \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a2c662375fd85223005a1a955806d832b}{Data\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Buffer\+Type Enum for object \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer_af06698528b8ad5326df06a60943da425}{Buffer\+Value}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Buffer value. Should contain a string as a valid file system path or a string that need to be served. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a9f539228b0303a39989352b90fd3988b}{Expiry\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Expiry Time is in Tick Count as Utc. After Expiry\+Time tick count is crossed the resource should not be served. Caution \+: it can be over rided by Ignore\+Expiry\+Time flag. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer_aeb642c055b040fe5d7f04e58a1b82ee4}{Ignore\+Expiry\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If this flag is set, the expiry time is over rided. It happens when the Constructor is called with timeout value as zero. Please note that there is another method Extend\+Expiry\+Time, it does not affect the Ignore\+Expiry\+Time flag. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a15fcb356f7318119513be34b11b9f6d6}{Cache\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Cache name is used to create file name, that shall be written on call of Url\+To\+Path \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer_afa05ddc467a347089e0e0f5d7dea8a4c}{U\+R\+Lto\+Path}} ()
+\begin{DoxyCompactList}\small\item\em If \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a34a310395d4f4472b24cf6da3fc3ab82a17de626bcae5109bb2f7a66dfc4a8a1d}{Buffer\+Type.\+B\+U\+F\+F\+ER}} is set for the object it will write the content of buffer to file name (given in Cache\+Name) in \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_global_config_a21a3589b22cff498ecd2828fdecf1213}{Global\+Config.\+Root\+Path}} folder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static I\+Log \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a6e29f78b66c34071da9a96d6be4e59cb}{\+\_\+logger}} = Log\+Manager.\+Get\+Logger(System.\+Reflection.\+Method\+Base.\+Get\+Current\+Method().Declaring\+Type)
+\begin{DoxyCompactList}\small\item\em log4net logger instance \end{DoxyCompactList}\item 
+static readonly object \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a6846fa3b517f31f92ed4a2a15cb1767b}{\+\_\+lock}} = new object()
+\begin{DoxyCompactList}\small\item\em Lock object used to create a thread safe call to file write. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 11 of file Http\+Response\+Buffer.\+cs.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a34a310395d4f4472b24cf6da3fc3ab82}\label{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a34a310395d4f4472b24cf6da3fc3ab82}} 
+\index{Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}!BufferType@{BufferType}}
+\index{BufferType@{BufferType}!Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}}
+\subsubsection{\texorpdfstring{BufferType}{BufferType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a34a310395d4f4472b24cf6da3fc3ab82}{Concord.\+C3\+Http\+Module.\+Http\+Response\+Buffer.\+Buffer\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumerator to define response buffer type, File or Buffer (a buffer is simply a string). 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FILE@{FILE}!Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}}\index{Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}!FILE@{FILE}}}\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a34a310395d4f4472b24cf6da3fc3ab82a9fc5887c030f7a3e19821ebec457e719}\label{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a34a310395d4f4472b24cf6da3fc3ab82a9fc5887c030f7a3e19821ebec457e719}} 
+F\+I\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BUFFER@{BUFFER}!Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}}\index{Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}!BUFFER@{BUFFER}}}\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a34a310395d4f4472b24cf6da3fc3ab82a17de626bcae5109bb2f7a66dfc4a8a1d}\label{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a34a310395d4f4472b24cf6da3fc3ab82a17de626bcae5109bb2f7a66dfc4a8a1d}} 
+B\+U\+F\+F\+ER&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 24 of file Http\+Response\+Buffer.\+cs.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_response_buffer_ad257bda222318401c41e4a9465e3ed84}\label{class_concord_1_1_c3_http_module_1_1_http_response_buffer_ad257bda222318401c41e4a9465e3ed84}} 
+\index{Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}!HttpResponseBuffer@{HttpResponseBuffer}}
+\index{HttpResponseBuffer@{HttpResponseBuffer}!Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}}
+\subsubsection{\texorpdfstring{HttpResponseBuffer()}{HttpResponseBuffer()}}
+{\footnotesize\ttfamily Concord.\+C3\+Http\+Module.\+Http\+Response\+Buffer.\+Http\+Response\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a34a310395d4f4472b24cf6da3fc3ab82}{Buffer\+Type}}}]{type,  }\item[{string}]{value,  }\item[{long}]{time\+Out,  }\item[{string}]{cache\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Buffer\+Type \+: File or string type.\\
+\hline
+{\em value} & Value of Buffer\+Type, in case of file it should be a readable file system path or string that need to be served as response\\
+\hline
+{\em time\+Out} & Timeout , pass zero if need to set it infinite. (See Ignore\+Expiry\+Time property)\\
+\hline
+{\em cache\+Name} & Name of file to be written.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 60 of file Http\+Response\+Buffer.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_http_response_buffer_ad257bda222318401c41e4a9465e3ed84_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_response_buffer_abfe159e6516c39e5ad77bdac8350f09b}\label{class_concord_1_1_c3_http_module_1_1_http_response_buffer_abfe159e6516c39e5ad77bdac8350f09b}} 
+\index{Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}!ExtendExpiryTime@{ExtendExpiryTime}}
+\index{ExtendExpiryTime@{ExtendExpiryTime}!Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}}
+\subsubsection{\texorpdfstring{ExtendExpiryTime()}{ExtendExpiryTime()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Concord.\+C3\+Http\+Module.\+Http\+Response\+Buffer.\+Extend\+Expiry\+Time (\begin{DoxyParamCaption}\item[{long}]{seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Called from Poke\+Url\+With\+Expiry. Extends expiry time of the object by \textquotesingle{}seconds\textquotesingle{}. Also, updates Time\+Out of the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seconds} & Extension time in seconds\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 158 of file Http\+Response\+Buffer.\+cs.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_http_response_buffer_abfe159e6516c39e5ad77bdac8350f09b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a4d61d781c5b28fa7969cbf0fd9ce4720}\label{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a4d61d781c5b28fa7969cbf0fd9ce4720}} 
+\index{Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}!ExtendExpiryTime@{ExtendExpiryTime}}
+\index{ExtendExpiryTime@{ExtendExpiryTime}!Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}}
+\subsubsection{\texorpdfstring{ExtendExpiryTime()}{ExtendExpiryTime()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Concord.\+C3\+Http\+Module.\+Http\+Response\+Buffer.\+Extend\+Expiry\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Called from Poke\+Url. Extends expiry time of the object by Time\+Out seconds. But does not update Time\+Out of the object. It uses Time\+Out seconds. So the new timeout/expiry time will be Time\+Out plus Current\+Time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seconds} & Extension time in seconds\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 167 of file Http\+Response\+Buffer.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a78e479ce9315db0f118145e814926b48}\label{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a78e479ce9315db0f118145e814926b48}} 
+\index{Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}!GetData@{GetData}}
+\index{GetData@{GetData}!Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}}
+\subsubsection{\texorpdfstring{GetData()}{GetData()}}
+{\footnotesize\ttfamily string Concord.\+C3\+Http\+Module.\+Http\+Response\+Buffer.\+Get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Api To Get Data of Buffer, 
+
+\begin{DoxyReturn}{Returns}
+If the Buffer\+Type is File the A\+PI will return file content. Else will return string it self if \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a34a310395d4f4472b24cf6da3fc3ab82a17de626bcae5109bb2f7a66dfc4a8a1d}{Buffer\+Type.\+B\+U\+F\+F\+ER}}
+\end{DoxyReturn}
+
+
+Definition at line 132 of file Http\+Response\+Buffer.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a78e479ce9315db0f118145e814926b48_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a78e479ce9315db0f118145e814926b48_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a29b2c2d2262cb331fe0f18e1dd930b5e}\label{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a29b2c2d2262cb331fe0f18e1dd930b5e}} 
+\index{Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}!UpdateTimeOut@{UpdateTimeOut}}
+\index{UpdateTimeOut@{UpdateTimeOut}!Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}}
+\subsubsection{\texorpdfstring{UpdateTimeOut()}{UpdateTimeOut()}}
+{\footnotesize\ttfamily void Concord.\+C3\+Http\+Module.\+Http\+Response\+Buffer.\+Update\+Time\+Out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method updates the time out, internally from the constructor and externally called when value of Virtual\+U\+R\+L\+Life\+Span changes. 
+
+
+
+Definition at line 106 of file Http\+Response\+Buffer.\+cs.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a29b2c2d2262cb331fe0f18e1dd930b5e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_response_buffer_afa05ddc467a347089e0e0f5d7dea8a4c}\label{class_concord_1_1_c3_http_module_1_1_http_response_buffer_afa05ddc467a347089e0e0f5d7dea8a4c}} 
+\index{Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}!URLtoPath@{URLtoPath}}
+\index{URLtoPath@{URLtoPath}!Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}}
+\subsubsection{\texorpdfstring{URLtoPath()}{URLtoPath()}}
+{\footnotesize\ttfamily void Concord.\+C3\+Http\+Module.\+Http\+Response\+Buffer.\+U\+R\+Lto\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+If \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a34a310395d4f4472b24cf6da3fc3ab82a17de626bcae5109bb2f7a66dfc4a8a1d}{Buffer\+Type.\+B\+U\+F\+F\+ER}} is set for the object it will write the content of buffer to file name (given in Cache\+Name) in \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_global_config_a21a3589b22cff498ecd2828fdecf1213}{Global\+Config.\+Root\+Path}} folder. 
+
+
+
+Definition at line 175 of file Http\+Response\+Buffer.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_http_response_buffer_afa05ddc467a347089e0e0f5d7dea8a4c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_http_response_buffer_afa05ddc467a347089e0e0f5d7dea8a4c_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a6846fa3b517f31f92ed4a2a15cb1767b}\label{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a6846fa3b517f31f92ed4a2a15cb1767b}} 
+\index{Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}!\_lock@{\_lock}}
+\index{\_lock@{\_lock}!Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}}
+\subsubsection{\texorpdfstring{\_lock}{\_lock}}
+{\footnotesize\ttfamily readonly object Concord.\+C3\+Http\+Module.\+Http\+Response\+Buffer.\+\_\+lock = new object()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Lock object used to create a thread safe call to file write. 
+
+
+
+Definition at line 20 of file Http\+Response\+Buffer.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a6e29f78b66c34071da9a96d6be4e59cb}\label{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a6e29f78b66c34071da9a96d6be4e59cb}} 
+\index{Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}!\_logger@{\_logger}}
+\index{\_logger@{\_logger}!Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}}
+\subsubsection{\texorpdfstring{\_logger}{\_logger}}
+{\footnotesize\ttfamily I\+Log Concord.\+C3\+Http\+Module.\+Http\+Response\+Buffer.\+\_\+logger = Log\+Manager.\+Get\+Logger(System.\+Reflection.\+Method\+Base.\+Get\+Current\+Method().Declaring\+Type)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+log4net logger instance 
+
+
+
+Definition at line 16 of file Http\+Response\+Buffer.\+cs.
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_response_buffer_af06698528b8ad5326df06a60943da425}\label{class_concord_1_1_c3_http_module_1_1_http_response_buffer_af06698528b8ad5326df06a60943da425}} 
+\index{Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}!BufferValue@{BufferValue}}
+\index{BufferValue@{BufferValue}!Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}}
+\subsubsection{\texorpdfstring{BufferValue}{BufferValue}}
+{\footnotesize\ttfamily string Concord.\+C3\+Http\+Module.\+Http\+Response\+Buffer.\+Buffer\+Value\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Buffer value. Should contain a string as a valid file system path or a string that need to be served. 
+
+
+
+Definition at line 39 of file Http\+Response\+Buffer.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a15fcb356f7318119513be34b11b9f6d6}\label{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a15fcb356f7318119513be34b11b9f6d6}} 
+\index{Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}!CacheName@{CacheName}}
+\index{CacheName@{CacheName}!Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}}
+\subsubsection{\texorpdfstring{CacheName}{CacheName}}
+{\footnotesize\ttfamily string Concord.\+C3\+Http\+Module.\+Http\+Response\+Buffer.\+Cache\+Name\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Cache name is used to create file name, that shall be written on call of Url\+To\+Path 
+
+
+
+Definition at line 51 of file Http\+Response\+Buffer.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a2c662375fd85223005a1a955806d832b}\label{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a2c662375fd85223005a1a955806d832b}} 
+\index{Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}!DataType@{DataType}}
+\index{DataType@{DataType}!Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}}
+\subsubsection{\texorpdfstring{DataType}{DataType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a34a310395d4f4472b24cf6da3fc3ab82}{Buffer\+Type}} Concord.\+C3\+Http\+Module.\+Http\+Response\+Buffer.\+Data\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Buffer\+Type Enum for object 
+
+
+
+Definition at line 35 of file Http\+Response\+Buffer.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a9f539228b0303a39989352b90fd3988b}\label{class_concord_1_1_c3_http_module_1_1_http_response_buffer_a9f539228b0303a39989352b90fd3988b}} 
+\index{Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}!ExpiryTime@{ExpiryTime}}
+\index{ExpiryTime@{ExpiryTime}!Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}}
+\subsubsection{\texorpdfstring{ExpiryTime}{ExpiryTime}}
+{\footnotesize\ttfamily long Concord.\+C3\+Http\+Module.\+Http\+Response\+Buffer.\+Expiry\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+
+
+Expiry Time is in Tick Count as Utc. After Expiry\+Time tick count is crossed the resource should not be served. Caution \+: it can be over rided by Ignore\+Expiry\+Time flag. 
+
+
+
+Definition at line 43 of file Http\+Response\+Buffer.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_response_buffer_aeb642c055b040fe5d7f04e58a1b82ee4}\label{class_concord_1_1_c3_http_module_1_1_http_response_buffer_aeb642c055b040fe5d7f04e58a1b82ee4}} 
+\index{Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}!IgnoreExpiryTime@{IgnoreExpiryTime}}
+\index{IgnoreExpiryTime@{IgnoreExpiryTime}!Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}}
+\subsubsection{\texorpdfstring{IgnoreExpiryTime}{IgnoreExpiryTime}}
+{\footnotesize\ttfamily bool Concord.\+C3\+Http\+Module.\+Http\+Response\+Buffer.\+Ignore\+Expiry\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+
+
+If this flag is set, the expiry time is over rided. It happens when the Constructor is called with timeout value as zero. Please note that there is another method Extend\+Expiry\+Time, it does not affect the Ignore\+Expiry\+Time flag. 
+
+
+
+Definition at line 47 of file Http\+Response\+Buffer.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_response_buffer_adf6f6e182181150ba1dd0c67c15483a0}\label{class_concord_1_1_c3_http_module_1_1_http_response_buffer_adf6f6e182181150ba1dd0c67c15483a0}} 
+\index{Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}!TimeOut@{TimeOut}}
+\index{TimeOut@{TimeOut}!Concord.C3HttpModule.HttpResponseBuffer@{Concord.C3HttpModule.HttpResponseBuffer}}
+\subsubsection{\texorpdfstring{TimeOut}{TimeOut}}
+{\footnotesize\ttfamily long Concord.\+C3\+Http\+Module.\+Http\+Response\+Buffer.\+Time\+Out\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Resoure time out, in seconds. The resource should not be served after Time\+Out seconds. 
+
+
+
+Definition at line 31 of file Http\+Response\+Buffer.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_http_response_buffer_8cs}{Http\+Response\+Buffer.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,225 @@
+\hypertarget{class_concord_1_1_c3_http_module_1_1_http_url_list}{}\section{Concord.\+C3\+Http\+Module.\+Http\+Url\+List Class Reference}
+\label{class_concord_1_1_c3_http_module_1_1_http_url_list}\index{Concord.C3HttpModule.HttpUrlList@{Concord.C3HttpModule.HttpUrlList}}
+
+
+Class is a wrapper / manager of a Concurrent\+Dictionary. This class is used as register of all available Http\+Response\+Buffer(s) as session.  
+
+
+
+
+Collaboration diagram for Concord.\+C3\+Http\+Module.\+Http\+Url\+List\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{class_concord_1_1_c3_http_module_1_1_http_url_list__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_url_list_acde20901c40b7add9cb2db32ab1c9953}{Add\+Url}} (string Url, \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer}{Http\+Response\+Buffer}} session)
+\begin{DoxyCompactList}\small\item\em Adds Url and object of \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer}{Http\+Response\+Buffer}} to Concurrent\+Dictionary \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer}{Http\+Response\+Buffer}} \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_url_list_a561da818d67bb58784165f31e53fe2d4}{Get\+Url}} (string str\+Url)
+\begin{DoxyCompactList}\small\item\em Gets \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer}{Http\+Response\+Buffer}} object aligned with str\+Url. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_url_list_acddaf4910903d915828c82b7c61f3fdc}{Remove\+Url}} (string Url)
+\begin{DoxyCompactList}\small\item\em Removes the Url and the object from Concurrent\+Dictionary. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_url_list_a827cc894faba7a6e238d2c88d5f713a4}{Url\+Exists}} (string url)
+\begin{DoxyCompactList}\small\item\em Checks if Url exists in the Concurrent dictionary as a key. It does not checks for a sanity of the \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer}{Http\+Response\+Buffer}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_url_list_ac7cb0246fc6be60e897fc560bbf1fd13}{Update\+Time\+Out\+Of\+All\+Urls}} ()
+\begin{DoxyCompactList}\small\item\em Called from setter of Virtual\+U\+R\+L\+Life\+Span. Changes the time span of all the objects associated with the Url. Warning \+: It will refresh the timeout from Date\+Time.\+Now. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Concurrent\+Dictionary$<$ string, \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer}{Http\+Response\+Buffer}} $>$ \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_url_list_a28cb149b807e1ccecab2eb3291e07528}{\+\_\+http\+Url\+List}} = new Concurrent\+Dictionary$<$string, \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer}{Http\+Response\+Buffer}}$>$()
+\begin{DoxyCompactList}\small\item\em private object of Concurrent\+Dictionary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static I\+Log \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_url_list_ae0a89d748d91a2c6bad3d66a78c11a3d}{\+\_\+logger}} = Log\+Manager.\+Get\+Logger(System.\+Reflection.\+Method\+Base.\+Get\+Current\+Method().Declaring\+Type)
+\begin{DoxyCompactList}\small\item\em log4net logger, used for logging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class is a wrapper / manager of a Concurrent\+Dictionary. This class is used as register of all available Http\+Response\+Buffer(s) as session. 
+
+
+
+Definition at line 14 of file Http\+Url\+List.\+cs.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_url_list_acde20901c40b7add9cb2db32ab1c9953}\label{class_concord_1_1_c3_http_module_1_1_http_url_list_acde20901c40b7add9cb2db32ab1c9953}} 
+\index{Concord.C3HttpModule.HttpUrlList@{Concord.C3HttpModule.HttpUrlList}!AddUrl@{AddUrl}}
+\index{AddUrl@{AddUrl}!Concord.C3HttpModule.HttpUrlList@{Concord.C3HttpModule.HttpUrlList}}
+\subsubsection{\texorpdfstring{AddUrl()}{AddUrl()}}
+{\footnotesize\ttfamily bool Concord.\+C3\+Http\+Module.\+Http\+Url\+List.\+Add\+Url (\begin{DoxyParamCaption}\item[{string}]{Url,  }\item[{\mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer}{Http\+Response\+Buffer}}}]{session }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds Url and object of \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer}{Http\+Response\+Buffer}} to Concurrent\+Dictionary 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Url} & Url that is called by the user agent.\\
+\hline
+{\em session} & Session is an object \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer}{Http\+Response\+Buffer}}. See \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer}{Http\+Response\+Buffer}} documentation for more.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 31 of file Http\+Url\+List.\+cs.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_http_url_list_acde20901c40b7add9cb2db32ab1c9953_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_url_list_a561da818d67bb58784165f31e53fe2d4}\label{class_concord_1_1_c3_http_module_1_1_http_url_list_a561da818d67bb58784165f31e53fe2d4}} 
+\index{Concord.C3HttpModule.HttpUrlList@{Concord.C3HttpModule.HttpUrlList}!GetUrl@{GetUrl}}
+\index{GetUrl@{GetUrl}!Concord.C3HttpModule.HttpUrlList@{Concord.C3HttpModule.HttpUrlList}}
+\subsubsection{\texorpdfstring{GetUrl()}{GetUrl()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer}{Http\+Response\+Buffer}} Concord.\+C3\+Http\+Module.\+Http\+Url\+List.\+Get\+Url (\begin{DoxyParamCaption}\item[{string}]{str\+Url }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer}{Http\+Response\+Buffer}} object aligned with str\+Url. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str\+Url} & Url against which the response Buffer is extracted.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 67 of file Http\+Url\+List.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_http_url_list_a561da818d67bb58784165f31e53fe2d4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_http_url_list_a561da818d67bb58784165f31e53fe2d4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_url_list_acddaf4910903d915828c82b7c61f3fdc}\label{class_concord_1_1_c3_http_module_1_1_http_url_list_acddaf4910903d915828c82b7c61f3fdc}} 
+\index{Concord.C3HttpModule.HttpUrlList@{Concord.C3HttpModule.HttpUrlList}!RemoveUrl@{RemoveUrl}}
+\index{RemoveUrl@{RemoveUrl}!Concord.C3HttpModule.HttpUrlList@{Concord.C3HttpModule.HttpUrlList}}
+\subsubsection{\texorpdfstring{RemoveUrl()}{RemoveUrl()}}
+{\footnotesize\ttfamily bool Concord.\+C3\+Http\+Module.\+Http\+Url\+List.\+Remove\+Url (\begin{DoxyParamCaption}\item[{string}]{Url }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes the Url and the object from Concurrent\+Dictionary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Url} & Url which needs to be removed\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 94 of file Http\+Url\+List.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_http_url_list_acddaf4910903d915828c82b7c61f3fdc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_url_list_ac7cb0246fc6be60e897fc560bbf1fd13}\label{class_concord_1_1_c3_http_module_1_1_http_url_list_ac7cb0246fc6be60e897fc560bbf1fd13}} 
+\index{Concord.C3HttpModule.HttpUrlList@{Concord.C3HttpModule.HttpUrlList}!UpdateTimeOutOfAllUrls@{UpdateTimeOutOfAllUrls}}
+\index{UpdateTimeOutOfAllUrls@{UpdateTimeOutOfAllUrls}!Concord.C3HttpModule.HttpUrlList@{Concord.C3HttpModule.HttpUrlList}}
+\subsubsection{\texorpdfstring{UpdateTimeOutOfAllUrls()}{UpdateTimeOutOfAllUrls()}}
+{\footnotesize\ttfamily void Concord.\+C3\+Http\+Module.\+Http\+Url\+List.\+Update\+Time\+Out\+Of\+All\+Urls (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Called from setter of Virtual\+U\+R\+L\+Life\+Span. Changes the time span of all the objects associated with the Url. Warning \+: It will refresh the timeout from Date\+Time.\+Now. 
+
+
+
+Definition at line 135 of file Http\+Url\+List.\+cs.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_http_url_list_ac7cb0246fc6be60e897fc560bbf1fd13_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_url_list_a827cc894faba7a6e238d2c88d5f713a4}\label{class_concord_1_1_c3_http_module_1_1_http_url_list_a827cc894faba7a6e238d2c88d5f713a4}} 
+\index{Concord.C3HttpModule.HttpUrlList@{Concord.C3HttpModule.HttpUrlList}!UrlExists@{UrlExists}}
+\index{UrlExists@{UrlExists}!Concord.C3HttpModule.HttpUrlList@{Concord.C3HttpModule.HttpUrlList}}
+\subsubsection{\texorpdfstring{UrlExists()}{UrlExists()}}
+{\footnotesize\ttfamily bool Concord.\+C3\+Http\+Module.\+Http\+Url\+List.\+Url\+Exists (\begin{DoxyParamCaption}\item[{string}]{url }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if Url exists in the Concurrent dictionary as a key. It does not checks for a sanity of the \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer}{Http\+Response\+Buffer}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em url} & U\+RL to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 122 of file Http\+Url\+List.\+cs.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_url_list_a28cb149b807e1ccecab2eb3291e07528}\label{class_concord_1_1_c3_http_module_1_1_http_url_list_a28cb149b807e1ccecab2eb3291e07528}} 
+\index{Concord.C3HttpModule.HttpUrlList@{Concord.C3HttpModule.HttpUrlList}!\_httpUrlList@{\_httpUrlList}}
+\index{\_httpUrlList@{\_httpUrlList}!Concord.C3HttpModule.HttpUrlList@{Concord.C3HttpModule.HttpUrlList}}
+\subsubsection{\texorpdfstring{\_httpUrlList}{\_httpUrlList}}
+{\footnotesize\ttfamily Concurrent\+Dictionary$<$string, \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer}{Http\+Response\+Buffer}}$>$ Concord.\+C3\+Http\+Module.\+Http\+Url\+List.\+\_\+http\+Url\+List = new Concurrent\+Dictionary$<$string, \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer}{Http\+Response\+Buffer}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+private object of Concurrent\+Dictionary. 
+
+
+
+Definition at line 23 of file Http\+Url\+List.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_http_url_list_ae0a89d748d91a2c6bad3d66a78c11a3d}\label{class_concord_1_1_c3_http_module_1_1_http_url_list_ae0a89d748d91a2c6bad3d66a78c11a3d}} 
+\index{Concord.C3HttpModule.HttpUrlList@{Concord.C3HttpModule.HttpUrlList}!\_logger@{\_logger}}
+\index{\_logger@{\_logger}!Concord.C3HttpModule.HttpUrlList@{Concord.C3HttpModule.HttpUrlList}}
+\subsubsection{\texorpdfstring{\_logger}{\_logger}}
+{\footnotesize\ttfamily I\+Log Concord.\+C3\+Http\+Module.\+Http\+Url\+List.\+\_\+logger = Log\+Manager.\+Get\+Logger(System.\+Reflection.\+Method\+Base.\+Get\+Current\+Method().Declaring\+Type)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+log4net logger, used for logging. 
+
+
+
+Definition at line 19 of file Http\+Url\+List.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_http_url_list_8cs}{Http\+Url\+List.\+cs}}\end{DoxyCompactItemize}

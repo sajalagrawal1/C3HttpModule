@@ -1,0 +1,4 @@
+<map id="Concord.C3HttpModule.HttpUrlList.GetUrl" name="Concord.C3HttpModule.HttpUrlList.GetUrl">
+<area shape="rect" id="node1" title="Gets HttpResponseBuffer object aligned with strUrl." alt="" coords="5,5,189,47"/>
+<area shape="rect" id="node2" href="$class_concord_1_1_c3_http_module_1_1_utilities.html#a28cf8fb31878e9955f8f2f9489e1c4a5" title="Gets Calling method name" alt="" coords="237,5,444,47"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Concord.C3HttpModule.Utilities.UnixToWindowsPath" name="Concord.C3HttpModule.Utilities.UnixToWindowsPath">
+<area shape="rect" id="node1" title="Converts slashes to back slashes in a path. Blindly replaces / to . Suggested that it should be used ..." alt="" coords="540,39,747,80"/>
+<area shape="rect" id="node2" href="$class_concord_1_1_c3_http_module_1_1_utilities.html#a38d22d17b3554cf5064b7b4a9e5dbef0" title="Two directories as a string are passed. One is Root Path and another is cacheName...." alt="" coords="285,5,492,47"/>
+<area shape="rect" id="node4" href="$class_concord_1_1_c3_http_module_1_1_web_server.html#ac9786f7a42e9d04a8c8bda5ff7caa482" title="Send Response is the method registered in HttpResponseContext to get the response,..." alt="" coords="295,71,482,112"/>
+<area shape="rect" id="node3" href="$class_concord_1_1_c3_http_module_1_1_http_response_buffer.html#ad257bda222318401c41e4a9465e3ed84" title="Constructor" alt="" coords="5,5,237,47"/>
+<area shape="rect" id="node5" href="$class_concord_1_1_c3_http_module_1_1_web_server.html#a1f9e775ee54aa91662039d7f1a549193" title="Private Constructor." alt="" coords="28,71,215,112"/>
+</map>

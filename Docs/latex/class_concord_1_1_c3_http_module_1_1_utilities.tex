@@ -1,0 +1,229 @@
+\hypertarget{class_concord_1_1_c3_http_module_1_1_utilities}{}\section{Concord.\+C3\+Http\+Module.\+Utilities Class Reference}
+\label{class_concord_1_1_c3_http_module_1_1_utilities}\index{Concord.C3HttpModule.Utilities@{Concord.C3HttpModule.Utilities}}
+
+
+Utility static method can be coded here.  
+
+
+
+
+Collaboration diagram for Concord.\+C3\+Http\+Module.\+Utilities\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_concord_1_1_c3_http_module_1_1_utilities__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_utilities_aadfb9271c63b98ed7754cfb8e07072e2}{Readable\+Exception}} (Exception exception)
+\begin{DoxyCompactList}\small\item\em Utility method to wrap exception and all its inner exceptions to a string. Concats Message and Stack Trace to a string. \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_utilities_a38d22d17b3554cf5064b7b4a9e5dbef0}{Get\+Directory\+Path\+From\+Url\+Path}} (string root\+Path, string cache\+Name)
+\begin{DoxyCompactList}\small\item\em Two directories as a string are passed. One is Root Path and another is cache\+Name. Cache\+Name is converted into windows path. If cachename ends with a file name, it trims of the file name to get directory from the cache\+Name argument and joins it to Root\+Path Example \+: Root\+Path = C\+:\textbackslash{}\+Temp , cache\+Name = Folder/filename.\+html =$>$ Output \+: C\+:\textbackslash{}\+Temp\textbackslash{}\+Folder \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Char \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_utilities_a34a3dbc84a7e367188bb8cf6a81343c8}{Get\+Directory\+Separator\+Used\+In\+Path}} (string path)
+\begin{DoxyCompactList}\small\item\em Returns sperator used in path. \end{DoxyCompactList}\item 
+static internal string \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_utilities_a40b3b3a642c04aacdbcf766ea049313d}{Unix\+To\+Windows\+Path}} (string nix\+Path)
+\begin{DoxyCompactList}\small\item\em Converts slashes to back slashes in a path. Blindly replaces / to . Suggested that it should be used after Clean\+Unix\+Url call. \end{DoxyCompactList}\item 
+static internal string \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_utilities_a5c66ffbfd1a9f0723be7b7163ce9f778}{Clean\+Unix\+Url}} (string raw\+Url)
+\begin{DoxyCompactList}\small\item\em Returns a clean unix url. Converts multiple slashes to one slash. Removes leading slash. \end{DoxyCompactList}\item 
+static internal string \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_utilities_a28cf8fb31878e9955f8f2f9489e1c4a5}{Get\+Method\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Gets Calling method name \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Utility static method can be coded here. 
+
+
+
+Definition at line 16 of file Utilities.\+cs.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_utilities_a5c66ffbfd1a9f0723be7b7163ce9f778}\label{class_concord_1_1_c3_http_module_1_1_utilities_a5c66ffbfd1a9f0723be7b7163ce9f778}} 
+\index{Concord.C3HttpModule.Utilities@{Concord.C3HttpModule.Utilities}!CleanUnixUrl@{CleanUnixUrl}}
+\index{CleanUnixUrl@{CleanUnixUrl}!Concord.C3HttpModule.Utilities@{Concord.C3HttpModule.Utilities}}
+\subsubsection{\texorpdfstring{CleanUnixUrl()}{CleanUnixUrl()}}
+{\footnotesize\ttfamily static internal string Concord.\+C3\+Http\+Module.\+Utilities.\+Clean\+Unix\+Url (\begin{DoxyParamCaption}\item[{string}]{raw\+Url }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Returns a clean unix url. Converts multiple slashes to one slash. Removes leading slash. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+Url} & Takes a url\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Trimmed well mannered U\+RL
+\end{DoxyReturn}
+
+
+Definition at line 80 of file Utilities.\+cs.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_utilities_a5c66ffbfd1a9f0723be7b7163ce9f778_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_utilities_a38d22d17b3554cf5064b7b4a9e5dbef0}\label{class_concord_1_1_c3_http_module_1_1_utilities_a38d22d17b3554cf5064b7b4a9e5dbef0}} 
+\index{Concord.C3HttpModule.Utilities@{Concord.C3HttpModule.Utilities}!GetDirectoryPathFromUrlPath@{GetDirectoryPathFromUrlPath}}
+\index{GetDirectoryPathFromUrlPath@{GetDirectoryPathFromUrlPath}!Concord.C3HttpModule.Utilities@{Concord.C3HttpModule.Utilities}}
+\subsubsection{\texorpdfstring{GetDirectoryPathFromUrlPath()}{GetDirectoryPathFromUrlPath()}}
+{\footnotesize\ttfamily static string Concord.\+C3\+Http\+Module.\+Utilities.\+Get\+Directory\+Path\+From\+Url\+Path (\begin{DoxyParamCaption}\item[{string}]{root\+Path,  }\item[{string}]{cache\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Two directories as a string are passed. One is Root Path and another is cache\+Name. Cache\+Name is converted into windows path. If cachename ends with a file name, it trims of the file name to get directory from the cache\+Name argument and joins it to Root\+Path Example \+: Root\+Path = C\+:\textbackslash{}\+Temp , cache\+Name = Folder/filename.\+html =$>$ Output \+: C\+:\textbackslash{}\+Temp\textbackslash{}\+Folder 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root\+Path} & Path to append folder to\\
+\hline
+{\em cache\+Name} & Extract folder from path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Path as string, joins Root\+Path and directory of cache\+Name
+\end{DoxyReturn}
+
+
+Definition at line 41 of file Utilities.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_utilities_a38d22d17b3554cf5064b7b4a9e5dbef0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_utilities_a38d22d17b3554cf5064b7b4a9e5dbef0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_utilities_a34a3dbc84a7e367188bb8cf6a81343c8}\label{class_concord_1_1_c3_http_module_1_1_utilities_a34a3dbc84a7e367188bb8cf6a81343c8}} 
+\index{Concord.C3HttpModule.Utilities@{Concord.C3HttpModule.Utilities}!GetDirectorySeparatorUsedInPath@{GetDirectorySeparatorUsedInPath}}
+\index{GetDirectorySeparatorUsedInPath@{GetDirectorySeparatorUsedInPath}!Concord.C3HttpModule.Utilities@{Concord.C3HttpModule.Utilities}}
+\subsubsection{\texorpdfstring{GetDirectorySeparatorUsedInPath()}{GetDirectorySeparatorUsedInPath()}}
+{\footnotesize\ttfamily static Char Concord.\+C3\+Http\+Module.\+Utilities.\+Get\+Directory\+Separator\+Used\+In\+Path (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Returns sperator used in path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Url Path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 55 of file Utilities.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_utilities_a28cf8fb31878e9955f8f2f9489e1c4a5}\label{class_concord_1_1_c3_http_module_1_1_utilities_a28cf8fb31878e9955f8f2f9489e1c4a5}} 
+\index{Concord.C3HttpModule.Utilities@{Concord.C3HttpModule.Utilities}!GetMethodName@{GetMethodName}}
+\index{GetMethodName@{GetMethodName}!Concord.C3HttpModule.Utilities@{Concord.C3HttpModule.Utilities}}
+\subsubsection{\texorpdfstring{GetMethodName()}{GetMethodName()}}
+{\footnotesize\ttfamily static internal string Concord.\+C3\+Http\+Module.\+Utilities.\+Get\+Method\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Gets Calling method name 
+
+\begin{DoxyReturn}{Returns}
+Return method name
+\end{DoxyReturn}
+
+
+Definition at line 92 of file Utilities.\+cs.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_utilities_a28cf8fb31878e9955f8f2f9489e1c4a5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_utilities_aadfb9271c63b98ed7754cfb8e07072e2}\label{class_concord_1_1_c3_http_module_1_1_utilities_aadfb9271c63b98ed7754cfb8e07072e2}} 
+\index{Concord.C3HttpModule.Utilities@{Concord.C3HttpModule.Utilities}!ReadableException@{ReadableException}}
+\index{ReadableException@{ReadableException}!Concord.C3HttpModule.Utilities@{Concord.C3HttpModule.Utilities}}
+\subsubsection{\texorpdfstring{ReadableException()}{ReadableException()}}
+{\footnotesize\ttfamily static string Concord.\+C3\+Http\+Module.\+Utilities.\+Readable\+Exception (\begin{DoxyParamCaption}\item[{Exception}]{exception }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Utility method to wrap exception and all its inner exceptions to a string. Concats Message and Stack Trace to a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em exception} & Exception to string-\/ify\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String-\/ified exceptions
+\end{DoxyReturn}
+
+
+Definition at line 23 of file Utilities.\+cs.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_utilities_aadfb9271c63b98ed7754cfb8e07072e2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_utilities_a40b3b3a642c04aacdbcf766ea049313d}\label{class_concord_1_1_c3_http_module_1_1_utilities_a40b3b3a642c04aacdbcf766ea049313d}} 
+\index{Concord.C3HttpModule.Utilities@{Concord.C3HttpModule.Utilities}!UnixToWindowsPath@{UnixToWindowsPath}}
+\index{UnixToWindowsPath@{UnixToWindowsPath}!Concord.C3HttpModule.Utilities@{Concord.C3HttpModule.Utilities}}
+\subsubsection{\texorpdfstring{UnixToWindowsPath()}{UnixToWindowsPath()}}
+{\footnotesize\ttfamily static internal string Concord.\+C3\+Http\+Module.\+Utilities.\+Unix\+To\+Windows\+Path (\begin{DoxyParamCaption}\item[{string}]{nix\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Converts slashes to back slashes in a path. Blindly replaces / to . Suggested that it should be used after Clean\+Unix\+Url call. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nix\+Path} & Unix Path with slashes\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string with backslash.
+\end{DoxyReturn}
+
+
+Definition at line 68 of file Utilities.\+cs.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_utilities_a40b3b3a642c04aacdbcf766ea049313d_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_utilities_8cs}{Utilities.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<project name="Concord.C3HttpModule" default="local-build">
+  <include buildfile="${environment::get-variable('CONCORD_BUILD_BUILDTOOLS')}\GenericBuild.include" />
+
+  <target name="properties" description="Set properties if missing." unless="${target::has-executed('properties')}">
+    <ifnot test="${property::exists('SVNBaseURL')}" >
+      <property name="SVNBaseURL"  value="https://code.concordfax.com/repos/archive/"/>
+    </ifnot>
+    <ifnot test="${property::exists('build')}" >
+      <property name="build" 	value="release"/>
+    </ifnot>
+    <ifnot test="${property::exists('ModulePath')}" >
+      <property name="Module" 	value="Concord.C3HttpModule"/>
+      <property name="ModulePath" 	value="BlueRibbonIP/code/common/Concord.C3HttpModule/Trunk/Concord.C3HttpModule"/>
+      <property name="WorkingFolder" value="c:\Build"/>
+      <property name="svnuser"  	value=""/>
+      <property name="svnpassword"  value=""/>
+      <property name="version"        value="Extra"/>
+    </ifnot>
+    <ifnot test="${property::exists('BuildToolsFolder')}" >
+      <property name="BuildToolsFolder" value="D:\BuildTools"  overwrite="true"/>
+    </ifnot>
+
+    <property name="SourceFolder" value="${WorkingFolder}\${Module}\Src" />
+    <property name="filename"  value="${WorkingFolder}\${Module}\Bin\Release\${Module}.dll" />
+    <property name="Solution.file" value="${SourceFolder}\${Module}.sln" overwrite="true" />
+    <property name="installfile" value="" />     
+    <property name="nant.settings.currentframework" value="net-4.0" />
+    <property name="framework.version" value="v4.0.30319" />
+  </target>
+
+  <target name="compile2" description="compile the .net Solution" >
+    <echo message="Compiling project" file="${WorkingFolder}/${Module}.out" append="true"/>
+
+    <exec program="C:\WINDOWS\Microsoft.NET\Framework\${framework.version}\msbuild.exe">
+      <arg value="${Solution.file}" />
+      <arg value="/t:Clean" />
+    </exec>
+    
+    <exec program="C:\WINDOWS\Microsoft.NET\Framework\${framework.version}\msbuild.exe">
+      <arg value="${Solution.file}" />
+      <arg value="/t:Rebuild" />
+      <arg value="/p:Configuration=Release" />
+    </exec>
+
+    <exec program="C:\WINDOWS\Microsoft.NET\Framework\${framework.version}\msbuild.exe">
+      <arg value="${Solution.file}" />
+      <arg value="/t:Clean" />
+    </exec>
+
+    <exec program="C:\WINDOWS\Microsoft.NET\Framework\${framework.version}\msbuild.exe">
+      <arg value="${Solution.file}" />
+      <arg value="/t:Rebuild" />
+      <arg value="/p:Configuration=Debug" />
+    </exec>
+    
+    <echo message="Finished Compiling project" file="${WorkingFolder}/${Module}.out" append="true"/>
+  </target>
+
+  <target name="CopyBuildFiles2" description="copying files to file repository" >
+    <echo message="CopyBuildFiles2 started" file="${WorkingFolder}/${Module}.out" append="true"/>
+    <copy todir="${BuildFinalFolder}${version}/Release/">
+      <fileset basedir="${WorkingFolder}/${Module}/bin/Release/">
+        <include name="*.*" />
+      </fileset>
+    </copy>
+
+    <copy todir="${BuildFinalFolder}${version}/Debug/">
+      <fileset basedir="${WorkingFolder}/${Module}/bin/Debug/">
+        <include name="*.*" />
+      </fileset>
+    </copy>
+    
+    <echo message="CopyBuildFiles2 finished" file="${WorkingFolder}/${Module}.out" append="true"/>
+  </target>
+
+</project>

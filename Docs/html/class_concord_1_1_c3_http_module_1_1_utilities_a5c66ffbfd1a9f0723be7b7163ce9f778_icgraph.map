@@ -1,0 +1,13 @@
+<map id="Concord.C3HttpModule.Utilities.CleanUnixUrl" name="Concord.C3HttpModule.Utilities.CleanUnixUrl">
+<area shape="rect" id="node1" title="Returns a clean unix url. Converts multiple slashes to one slash. Removes leading slash." alt="" coords="540,235,747,276"/>
+<area shape="rect" id="node2" href="$class_concord_1_1_c3_http_module_1_1_utilities.html#a38d22d17b3554cf5064b7b4a9e5dbef0" title="Two directories as a string are passed. One is Root Path and another is cacheName...." alt="" coords="285,5,492,47"/>
+<area shape="rect" id="node4" href="$class_concord_1_1_c3_http_module_1_1_web_server.html#abd3b7b52f0a3190e8b36a0d45cd99574" title="Method to add Url with expiry. e.g. AddUrlWithExpiry(&quot;test.html&quot;, &quot;C:\Temp.html&quot;,..." alt="" coords="295,71,482,112"/>
+<area shape="rect" id="node5" href="$class_concord_1_1_c3_http_module_1_1_web_server.html#a9f17565ccae30225d831e01f14ce7b35" title="Method to add Url with expiry. e.g. AddUrlWithExpiry(&quot;test.html&quot;, &quot;This is a response string...." alt="" coords="285,136,492,177"/>
+<area shape="rect" id="node6" href="$class_concord_1_1_c3_http_module_1_1_web_server.html#ad44fcb4fc6cac61ba3af5bbe28d79132" title="Method to add Url with expiry. e.g. AddUrlWithExpiry(&quot;test.html&quot;, &quot;C:\Temp.html&quot;,..." alt="" coords="295,201,482,243"/>
+<area shape="rect" id="node7" href="$class_concord_1_1_c3_http_module_1_1_web_server.html#a911477bcbed2ac2482ab9dafbdd33994" title="Method to add Url with expiry. e.g. AddUrlWithExpiry(&quot;test.html&quot;, &quot;This is a response string...." alt="" coords="295,267,482,308"/>
+<area shape="rect" id="node8" href="$class_concord_1_1_c3_http_module_1_1_web_server.html#ad3121bff4e1aeaeb05a5f1636d1e7d65" title="Updates the Expiry of a url and updates TimeOut of the HttpResponseBuffer." alt="" coords="295,332,482,373"/>
+<area shape="rect" id="node9" href="$class_concord_1_1_c3_http_module_1_1_web_server.html#ad58516396d74972ad8f1005c889e1379" title="Updates the Expiry of a url, by already given TimeOut parameter." alt="" coords="295,397,482,439"/>
+<area shape="rect" id="node10" href="$class_concord_1_1_c3_http_module_1_1_web_server.html#ac9786f7a42e9d04a8c8bda5ff7caa482" title="Send Response is the method registered in HttpResponseContext to get the response,..." alt="" coords="295,463,482,504"/>
+<area shape="rect" id="node3" href="$class_concord_1_1_c3_http_module_1_1_http_response_buffer.html#ad257bda222318401c41e4a9465e3ed84" title="Constructor" alt="" coords="5,5,237,47"/>
+<area shape="rect" id="node11" href="$class_concord_1_1_c3_http_module_1_1_web_server.html#a1f9e775ee54aa91662039d7f1a549193" title="Private Constructor." alt="" coords="28,463,215,504"/>
+</map>

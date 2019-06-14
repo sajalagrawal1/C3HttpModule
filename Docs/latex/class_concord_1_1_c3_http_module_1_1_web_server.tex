@@ -1,0 +1,823 @@
+\hypertarget{class_concord_1_1_c3_http_module_1_1_web_server}{}\section{Concord.\+C3\+Http\+Module.\+Web\+Server Class Reference}
+\label{class_concord_1_1_c3_http_module_1_1_web_server}\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+
+
+Singleton Thread-\/safe class.  
+
+
+
+
+Inheritance diagram for Concord.\+C3\+Http\+Module.\+Web\+Server\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_concord_1_1_c3_http_module_1_1_web_server__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Concord.\+C3\+Http\+Module.\+Web\+Server\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_web_server__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a1f9e775ee54aa91662039d7f1a549193}{Web\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Private Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a3a0d02f87177a358cdf1442828829221}{Add\+Host\+And\+Port}} (string host, ushort port)
+\begin{DoxyCompactList}\small\item\em Method to add Host and Port to the listener. The server need to be \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a9e75b9b9d1eb2c58a1be558bf9182087}{Stop()}} ed and \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_ac95e30c39f5d922e6043377ccac20e6d}{Start()}} again to reflect the changes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_ac95e30c39f5d922e6043377ccac20e6d}{Start}} ()
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server}{Web\+Server}} should \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_ac95e30c39f5d922e6043377ccac20e6d}{Start()}} first and then \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a25053b2c9397975cf48565d98b9c2d9e}{Run()}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a9e75b9b9d1eb2c58a1be558bf9182087}{Stop}} ()
+\begin{DoxyCompactList}\small\item\em Method to stop Web Server. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_abd3b7b52f0a3190e8b36a0d45cd99574}{Add\+U\+R\+L\+With\+Expiry}} (string url, string filepath, long seconds)
+\begin{DoxyCompactList}\small\item\em Method to add Url with expiry. e.\+g. Add\+Url\+With\+Expiry(\char`\"{}test.\+html\char`\"{}, \char`\"{}\+C\+:\textbackslash{}\textbackslash{}\+Temp.\+html\char`\"{}, 0) Will add a url with no expiry. and can be accessed as \href{http://}{\texttt{ http\+://}}$<$url$>$\+:$<$port$>$/test.html \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a9f17565ccae30225d831e01f14ce7b35}{Add\+U\+R\+L\+Buffer\+With\+Expiry}} (string url, string value, long seconds)
+\begin{DoxyCompactList}\small\item\em Method to add Url with expiry. e.\+g. Add\+Url\+With\+Expiry(\char`\"{}test.\+html\char`\"{}, \char`\"{}\+This is a response string.\char`\"{}, 0) Will add a url with no expiry. and can be accessed as \href{http://}{\texttt{ http\+://}}$<$url$>$\+:$<$port$>$/test.html \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_ad44fcb4fc6cac61ba3af5bbe28d79132}{Add\+U\+RL}} (string url, string filepath)
+\begin{DoxyCompactList}\small\item\em Method to add Url with expiry. e.\+g. Add\+Url\+With\+Expiry(\char`\"{}test.\+html\char`\"{}, \char`\"{}\+C\+:\textbackslash{}\textbackslash{}\+Temp.\+html\char`\"{}, 0) Will add a url with no expiry. and can be accessed as \href{http://}{\texttt{ http\+://}}$<$url$>$\+:$<$port$>$/test.html \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a911477bcbed2ac2482ab9dafbdd33994}{Add\+U\+R\+L\+Buffer}} (string url, string value)
+\begin{DoxyCompactList}\small\item\em Method to add Url with expiry. e.\+g. Add\+Url\+With\+Expiry(\char`\"{}test.\+html\char`\"{}, \char`\"{}\+This is a response string.\char`\"{}, 0) Will add a url with no expiry. and can be accessed as \href{http://}{\texttt{ http\+://}}$<$url$>$\+:$<$port$>$/test.html \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_ad3121bff4e1aeaeb05a5f1636d1e7d65}{Poke\+Url\+With\+Expiry}} (string url, long seconds)
+\begin{DoxyCompactList}\small\item\em Updates the Expiry of a url and updates Time\+Out of the \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer}{Http\+Response\+Buffer}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_ad58516396d74972ad8f1005c889e1379}{Poke\+Url}} (string url)
+\begin{DoxyCompactList}\small\item\em Updates the Expiry of a url, by already given Time\+Out parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+long \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_ac992bf483d0f40c39532bb3b320f2a75}{Virtual\+U\+R\+L\+Life\+Span}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Default timeout applied to all U\+R\+Ls. If they are set with no timeout – that timeout applies instead. Using timeout of ‘-\/1’ triggers usage of the configured default timeout. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a38a773f41d735c63da0fe09a5b6f08c2}{Root\+Directory}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Root directory of the module. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_ac38109b56ad34adee4a2a538c4101c98}{Allow\+Browsing}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Flag to Allow Browsing, if it is set to false, all the calls should return error 403. \end{DoxyCompactList}\item 
+ushort \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a7f9d7208d0877507622dcfacbd3bcc97}{Port\+Number}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sets a port to the listener, defaults to 8080 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a9a5def732b3afd8530271b7a8de16591}{Server\+Address}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Property for server name/hostname. Defaults to $\ast$. $\ast$ will assign all the interfaces to the listener. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a372194bcca0a119f079abe7f767dee71}{Scheme}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Scheme of the listener, defaults to http. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_afd9ec2b5e4835ee1e5b59cd248e9c706}{Update\+All\+Life\+Spans}} ()
+\item 
+void \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a25053b2c9397975cf48565d98b9c2d9e}{Run}} ()
+\begin{DoxyCompactList}\small\item\em This method must be called in order to make server in a listening mode. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_ac9786f7a42e9d04a8c8bda5ff7caa482}{Send\+Response}} (Http\+Listener\+Context ctx)
+\begin{DoxyCompactList}\small\item\em Send Response is the method registered in Http\+Response\+Context to get the response, which needs to be sent on wire, eventually. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a2692917da9b294c53f5151c86409f726}{Get\+Directory\+Listing\+As\+Html}} (string directory\+Path)
+\begin{DoxyCompactList}\small\item\em Gets directory listing as H\+T\+ML format. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a406b1bfca1b92cedbfb0bdb792ae275f}{Get\+Response\+For\+Url}} (string url, string file\+Path, Http\+Listener\+Context ctx)
+\begin{DoxyCompactList}\small\item\em Gets the response in string from \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer}{Http\+Response\+Buffer}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+long \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_adbb7b3ec87d6021801930c29b21e6ef5}{\+\_\+virualt\+Life\+Span}} = -\/1
+\begin{DoxyCompactList}\small\item\em Virtual U\+RL Life span local holder. \end{DoxyCompactList}\item 
+readonly Http\+Listener \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a9fcf48705c4fba563e06f29fbea6c803}{\+\_\+listener}} = new Http\+Listener()
+\begin{DoxyCompactList}\small\item\em Http\+Listener object, the backbone of the application!!! \end{DoxyCompactList}\item 
+readonly Func$<$ Http\+Listener\+Context, string $>$ \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_af7c99a81dca2bd0079d3e22fb247e297}{\+\_\+responder\+Method}}
+\begin{DoxyCompactList}\small\item\em The Method which responds to the Http\+Listener\+Context as the data, which need to be sent. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_url_list}{Http\+Url\+List}} \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_aaea2f407ddadea5271a7ba77017a43d0}{\+\_\+http\+Url\+List}} = new \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_url_list}{Http\+Url\+List}}()
+\begin{DoxyCompactList}\small\item\em The list of Url and \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer}{Http\+Response\+Buffer}}, basically it is a wrapper over Concurrent\+Dictionary. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a1d7bbb290d534e300796f0cc3024ca53}{\+\_\+scheme}} = \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_constants_ad5d0cf769b25bef58e712036c67b915b}{Constants.\+H\+T\+T\+P\+\_\+\+S\+C\+H\+E\+ME}}
+\begin{DoxyCompactList}\small\item\em Set a scheme of the listener, defaults to http \end{DoxyCompactList}\item 
+ushort \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a2f1c06a69c766d913ac41c4e8a7a2c1b}{\+\_\+port}} = \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_constants_a4790c1697961574b369f80040d3fa9da}{Constants.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT}}
+\begin{DoxyCompactList}\small\item\em Sets a port to the listener, defaults to 8080 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_aac6507ed60e7bf9ac62740a84a4b1c70}{\+\_\+server}} = \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_constants_a3fe72e8bc32c96064538c8af8199c478}{Constants.\+A\+L\+L\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+ES}}
+\begin{DoxyCompactList}\small\item\em Sets host name for the listener, defaults to $\ast$. $\ast$ will assign all the interfaces to the listener. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a4119b37aad2d9713f2307bd854de122b}{\+\_\+root}} = System.\+I\+O.\+Path.\+Get\+Directory\+Name(System.\+Reflection.\+Assembly.\+Get\+Executing\+Assembly().Location)
+\begin{DoxyCompactList}\small\item\em Root Path for the app to store file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_uri_builder}{Http\+Uri\+Builder}} \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a9f3645e16eef4385e06108fbb0b3ad7a}{\+\_\+uri}} =$>$ new \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_uri_builder}{Http\+Uri\+Builder}}() \{ \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a372194bcca0a119f079abe7f767dee71}{Scheme}} = \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a1d7bbb290d534e300796f0cc3024ca53}{\+\_\+scheme}}, Host = \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_aac6507ed60e7bf9ac62740a84a4b1c70}{\+\_\+server}}, Port = \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a2f1c06a69c766d913ac41c4e8a7a2c1b}{\+\_\+port}} \}
+\begin{DoxyCompactList}\small\item\em Builds a Uri from the given properties \end{DoxyCompactList}\item 
+List$<$ string $>$ \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a621c105d864049d0ff6cda39e1cc9dc6}{\+\_\+prefixes}} = new List$<$string$>$()
+\begin{DoxyCompactList}\small\item\em More Prefixes (url hosts) can be assigned to the listener. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static I\+Log \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a95e1f65ea64f11e550fd2a8fd41614e3}{\+\_\+logger}} = Log\+Manager.\+Get\+Logger(System.\+Reflection.\+Method\+Base.\+Get\+Current\+Method().Declaring\+Type)
+\begin{DoxyCompactList}\small\item\em N\+L\+OG logger \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Singleton Thread-\/safe class. 
+
+
+
+Definition at line 16 of file Web\+Server.\+cs.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_a1f9e775ee54aa91662039d7f1a549193}\label{class_concord_1_1_c3_http_module_1_1_web_server_a1f9e775ee54aa91662039d7f1a549193}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!WebServer@{WebServer}}
+\index{WebServer@{WebServer}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{WebServer()}{WebServer()}}
+{\footnotesize\ttfamily Concord.\+C3\+Http\+Module.\+Web\+Server.\+Web\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Private Constructor. 
+
+
+
+Definition at line 166 of file Web\+Server.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_web_server_a1f9e775ee54aa91662039d7f1a549193_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_a3a0d02f87177a358cdf1442828829221}\label{class_concord_1_1_c3_http_module_1_1_web_server_a3a0d02f87177a358cdf1442828829221}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!AddHostAndPort@{AddHostAndPort}}
+\index{AddHostAndPort@{AddHostAndPort}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{AddHostAndPort()}{AddHostAndPort()}}
+{\footnotesize\ttfamily void Concord.\+C3\+Http\+Module.\+Web\+Server.\+Add\+Host\+And\+Port (\begin{DoxyParamCaption}\item[{string}]{host,  }\item[{ushort}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to add Host and Port to the listener. The server need to be \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a9e75b9b9d1eb2c58a1be558bf9182087}{Stop()}} ed and \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_ac95e30c39f5d922e6043377ccac20e6d}{Start()}} again to reflect the changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host} & \\
+\hline
+{\em port} & \\
+\hline
+{\em scheme} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_concord_1_1_c3_http_module_1_1_i_web_server_aa89c81f517e7081af15505ef4d5a7083}{Concord.\+C3\+Http\+Module.\+I\+Web\+Server}}.
+
+
+
+Definition at line 185 of file Web\+Server.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_ad44fcb4fc6cac61ba3af5bbe28d79132}\label{class_concord_1_1_c3_http_module_1_1_web_server_ad44fcb4fc6cac61ba3af5bbe28d79132}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!AddURL@{AddURL}}
+\index{AddURL@{AddURL}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{AddURL()}{AddURL()}}
+{\footnotesize\ttfamily bool Concord.\+C3\+Http\+Module.\+Web\+Server.\+Add\+U\+RL (\begin{DoxyParamCaption}\item[{string}]{url,  }\item[{string}]{filepath }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to add Url with expiry. e.\+g. Add\+Url\+With\+Expiry(\char`\"{}test.\+html\char`\"{}, \char`\"{}\+C\+:\textbackslash{}\textbackslash{}\+Temp.\+html\char`\"{}, 0) Will add a url with no expiry. and can be accessed as \href{http://}{\texttt{ http\+://}}$<$url$>$\+:$<$port$>$/test.html 
+
+
+\begin{DoxyParams}{Parameters}
+{\em url} & Url string to be assigned\\
+\hline
+{\em filepath} & File path of the file to be read and served back.\\
+\hline
+{\em seconds} & Number of seconds for expiry. 0 to ignore expiry.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_concord_1_1_c3_http_module_1_1_i_web_server_a4ebea56f3b1910ddf812d80045dbc6f2}{Concord.\+C3\+Http\+Module.\+I\+Web\+Server}}.
+
+
+
+Definition at line 308 of file Web\+Server.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_web_server_ad44fcb4fc6cac61ba3af5bbe28d79132_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_a911477bcbed2ac2482ab9dafbdd33994}\label{class_concord_1_1_c3_http_module_1_1_web_server_a911477bcbed2ac2482ab9dafbdd33994}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!AddURLBuffer@{AddURLBuffer}}
+\index{AddURLBuffer@{AddURLBuffer}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{AddURLBuffer()}{AddURLBuffer()}}
+{\footnotesize\ttfamily bool Concord.\+C3\+Http\+Module.\+Web\+Server.\+Add\+U\+R\+L\+Buffer (\begin{DoxyParamCaption}\item[{string}]{url,  }\item[{string}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to add Url with expiry. e.\+g. Add\+Url\+With\+Expiry(\char`\"{}test.\+html\char`\"{}, \char`\"{}\+This is a response string.\char`\"{}, 0) Will add a url with no expiry. and can be accessed as \href{http://}{\texttt{ http\+://}}$<$url$>$\+:$<$port$>$/test.html 
+
+
+\begin{DoxyParams}{Parameters}
+{\em url} & Url string to be assigned\\
+\hline
+{\em value} & File path of the file to be read and served back.\\
+\hline
+{\em seconds} & Number of seconds for expiry. 0 to ignore expiry.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_concord_1_1_c3_http_module_1_1_i_web_server_a9a176bd109854beffd146dfef15a276a}{Concord.\+C3\+Http\+Module.\+I\+Web\+Server}}.
+
+
+
+Definition at line 319 of file Web\+Server.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_web_server_a911477bcbed2ac2482ab9dafbdd33994_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_a9f17565ccae30225d831e01f14ce7b35}\label{class_concord_1_1_c3_http_module_1_1_web_server_a9f17565ccae30225d831e01f14ce7b35}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!AddURLBufferWithExpiry@{AddURLBufferWithExpiry}}
+\index{AddURLBufferWithExpiry@{AddURLBufferWithExpiry}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{AddURLBufferWithExpiry()}{AddURLBufferWithExpiry()}}
+{\footnotesize\ttfamily bool Concord.\+C3\+Http\+Module.\+Web\+Server.\+Add\+U\+R\+L\+Buffer\+With\+Expiry (\begin{DoxyParamCaption}\item[{string}]{url,  }\item[{string}]{value,  }\item[{long}]{seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to add Url with expiry. e.\+g. Add\+Url\+With\+Expiry(\char`\"{}test.\+html\char`\"{}, \char`\"{}\+This is a response string.\char`\"{}, 0) Will add a url with no expiry. and can be accessed as \href{http://}{\texttt{ http\+://}}$<$url$>$\+:$<$port$>$/test.html 
+
+
+\begin{DoxyParams}{Parameters}
+{\em url} & Url string to be assigned\\
+\hline
+{\em value} & File path of the file to be read and served back.\\
+\hline
+{\em seconds} & Number of seconds for expiry. 0 to ignore expiry.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_concord_1_1_c3_http_module_1_1_i_web_server_a5d036cb1c423339e820d0ea7beae0319}{Concord.\+C3\+Http\+Module.\+I\+Web\+Server}}.
+
+
+
+Definition at line 297 of file Web\+Server.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_web_server_a9f17565ccae30225d831e01f14ce7b35_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_abd3b7b52f0a3190e8b36a0d45cd99574}\label{class_concord_1_1_c3_http_module_1_1_web_server_abd3b7b52f0a3190e8b36a0d45cd99574}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!AddURLWithExpiry@{AddURLWithExpiry}}
+\index{AddURLWithExpiry@{AddURLWithExpiry}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{AddURLWithExpiry()}{AddURLWithExpiry()}}
+{\footnotesize\ttfamily bool Concord.\+C3\+Http\+Module.\+Web\+Server.\+Add\+U\+R\+L\+With\+Expiry (\begin{DoxyParamCaption}\item[{string}]{url,  }\item[{string}]{filepath,  }\item[{long}]{seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to add Url with expiry. e.\+g. Add\+Url\+With\+Expiry(\char`\"{}test.\+html\char`\"{}, \char`\"{}\+C\+:\textbackslash{}\textbackslash{}\+Temp.\+html\char`\"{}, 0) Will add a url with no expiry. and can be accessed as \href{http://}{\texttt{ http\+://}}$<$url$>$\+:$<$port$>$/test.html 
+
+
+\begin{DoxyParams}{Parameters}
+{\em url} & Url string to be assigned\\
+\hline
+{\em filepath} & File path of the file to be read and served back.\\
+\hline
+{\em seconds} & Number of seconds for expiry. 0 to ignore expiry.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_concord_1_1_c3_http_module_1_1_i_web_server_a7a04a9fca3a8f948c62d0fd7c6ca8220}{Concord.\+C3\+Http\+Module.\+I\+Web\+Server}}.
+
+
+
+Definition at line 286 of file Web\+Server.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_web_server_abd3b7b52f0a3190e8b36a0d45cd99574_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_a2692917da9b294c53f5151c86409f726}\label{class_concord_1_1_c3_http_module_1_1_web_server_a2692917da9b294c53f5151c86409f726}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!GetDirectoryListingAsHtml@{GetDirectoryListingAsHtml}}
+\index{GetDirectoryListingAsHtml@{GetDirectoryListingAsHtml}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{GetDirectoryListingAsHtml()}{GetDirectoryListingAsHtml()}}
+{\footnotesize\ttfamily string Concord.\+C3\+Http\+Module.\+Web\+Server.\+Get\+Directory\+Listing\+As\+Html (\begin{DoxyParamCaption}\item[{string}]{directory\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Gets directory listing as H\+T\+ML format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em directory\+Path} & Path for which directory listing has to be created.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A html formatted string
+\end{DoxyReturn}
+
+
+Definition at line 395 of file Web\+Server.\+cs.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_web_server_a2692917da9b294c53f5151c86409f726_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_a406b1bfca1b92cedbfb0bdb792ae275f}\label{class_concord_1_1_c3_http_module_1_1_web_server_a406b1bfca1b92cedbfb0bdb792ae275f}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!GetResponseForUrl@{GetResponseForUrl}}
+\index{GetResponseForUrl@{GetResponseForUrl}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{GetResponseForUrl()}{GetResponseForUrl()}}
+{\footnotesize\ttfamily string Concord.\+C3\+Http\+Module.\+Web\+Server.\+Get\+Response\+For\+Url (\begin{DoxyParamCaption}\item[{string}]{url,  }\item[{string}]{file\+Path,  }\item[{Http\+Listener\+Context}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Gets the response in string from \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer}{Http\+Response\+Buffer}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em url} & Url for which response is needed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 433 of file Web\+Server.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_web_server_a406b1bfca1b92cedbfb0bdb792ae275f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_web_server_a406b1bfca1b92cedbfb0bdb792ae275f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_ad58516396d74972ad8f1005c889e1379}\label{class_concord_1_1_c3_http_module_1_1_web_server_ad58516396d74972ad8f1005c889e1379}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!PokeUrl@{PokeUrl}}
+\index{PokeUrl@{PokeUrl}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{PokeUrl()}{PokeUrl()}}
+{\footnotesize\ttfamily void Concord.\+C3\+Http\+Module.\+Web\+Server.\+Poke\+Url (\begin{DoxyParamCaption}\item[{string}]{url }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the Expiry of a url, by already given Time\+Out parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em url} & Url for which expiry times need to updated.\\
+\hline
+{\em seconds} & Time in seconds.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_concord_1_1_c3_http_module_1_1_i_web_server_a54d1254c7264250739d47175c1d1929d}{Concord.\+C3\+Http\+Module.\+I\+Web\+Server}}.
+
+
+
+Definition at line 349 of file Web\+Server.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_web_server_ad58516396d74972ad8f1005c889e1379_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_ad3121bff4e1aeaeb05a5f1636d1e7d65}\label{class_concord_1_1_c3_http_module_1_1_web_server_ad3121bff4e1aeaeb05a5f1636d1e7d65}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!PokeUrlWithExpiry@{PokeUrlWithExpiry}}
+\index{PokeUrlWithExpiry@{PokeUrlWithExpiry}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{PokeUrlWithExpiry()}{PokeUrlWithExpiry()}}
+{\footnotesize\ttfamily void Concord.\+C3\+Http\+Module.\+Web\+Server.\+Poke\+Url\+With\+Expiry (\begin{DoxyParamCaption}\item[{string}]{url,  }\item[{long}]{seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the Expiry of a url and updates Time\+Out of the \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer}{Http\+Response\+Buffer}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em url} & Url for which expiry times need to updated.\\
+\hline
+{\em seconds} & Time in seconds.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_concord_1_1_c3_http_module_1_1_i_web_server_a4d16137e82bd2416f07c86701d8506ff}{Concord.\+C3\+Http\+Module.\+I\+Web\+Server}}.
+
+
+
+Definition at line 330 of file Web\+Server.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_web_server_ad3121bff4e1aeaeb05a5f1636d1e7d65_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_a25053b2c9397975cf48565d98b9c2d9e}\label{class_concord_1_1_c3_http_module_1_1_web_server_a25053b2c9397975cf48565d98b9c2d9e}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!Run@{Run}}
+\index{Run@{Run}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily void Concord.\+C3\+Http\+Module.\+Web\+Server.\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+This method must be called in order to make server in a listening mode. 
+
+
+
+Definition at line 197 of file Web\+Server.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_web_server_a25053b2c9397975cf48565d98b9c2d9e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_web_server_a25053b2c9397975cf48565d98b9c2d9e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_ac9786f7a42e9d04a8c8bda5ff7caa482}\label{class_concord_1_1_c3_http_module_1_1_web_server_ac9786f7a42e9d04a8c8bda5ff7caa482}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!SendResponse@{SendResponse}}
+\index{SendResponse@{SendResponse}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{SendResponse()}{SendResponse()}}
+{\footnotesize\ttfamily string Concord.\+C3\+Http\+Module.\+Web\+Server.\+Send\+Response (\begin{DoxyParamCaption}\item[{Http\+Listener\+Context}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Send Response is the method registered in Http\+Response\+Context to get the response, which needs to be sent on wire, eventually. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 368 of file Web\+Server.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_web_server_ac9786f7a42e9d04a8c8bda5ff7caa482_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_web_server_ac9786f7a42e9d04a8c8bda5ff7caa482_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_ac95e30c39f5d922e6043377ccac20e6d}\label{class_concord_1_1_c3_http_module_1_1_web_server_ac95e30c39f5d922e6043377ccac20e6d}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!Start@{Start}}
+\index{Start@{Start}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Concord.\+C3\+Http\+Module.\+Web\+Server.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server}{Web\+Server}} should \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_ac95e30c39f5d922e6043377ccac20e6d}{Start()}} first and then \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a25053b2c9397975cf48565d98b9c2d9e}{Run()}}. 
+
+
+
+Implements \mbox{\hyperlink{interface_concord_1_1_c3_http_module_1_1_i_web_server_a9f361fa34fa5c93d792e32a3ce8969cf}{Concord.\+C3\+Http\+Module.\+I\+Web\+Server}}.
+
+
+
+Definition at line 251 of file Web\+Server.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_web_server_ac95e30c39f5d922e6043377ccac20e6d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_a9e75b9b9d1eb2c58a1be558bf9182087}\label{class_concord_1_1_c3_http_module_1_1_web_server_a9e75b9b9d1eb2c58a1be558bf9182087}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!Stop@{Stop}}
+\index{Stop@{Stop}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily void Concord.\+C3\+Http\+Module.\+Web\+Server.\+Stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to stop Web Server. 
+
+
+
+Implements \mbox{\hyperlink{interface_concord_1_1_c3_http_module_1_1_i_web_server_a800e9a97640440f79e356cf3fa3ddbf8}{Concord.\+C3\+Http\+Module.\+I\+Web\+Server}}.
+
+
+
+Definition at line 275 of file Web\+Server.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_afd9ec2b5e4835ee1e5b59cd248e9c706}\label{class_concord_1_1_c3_http_module_1_1_web_server_afd9ec2b5e4835ee1e5b59cd248e9c706}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!UpdateAllLifeSpans@{UpdateAllLifeSpans}}
+\index{UpdateAllLifeSpans@{UpdateAllLifeSpans}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{UpdateAllLifeSpans()}{UpdateAllLifeSpans()}}
+{\footnotesize\ttfamily void Concord.\+C3\+Http\+Module.\+Web\+Server.\+Update\+All\+Life\+Spans (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 70 of file Web\+Server.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concord_1_1_c3_http_module_1_1_web_server_afd9ec2b5e4835ee1e5b59cd248e9c706_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_aaea2f407ddadea5271a7ba77017a43d0}\label{class_concord_1_1_c3_http_module_1_1_web_server_aaea2f407ddadea5271a7ba77017a43d0}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!\_httpUrlList@{\_httpUrlList}}
+\index{\_httpUrlList@{\_httpUrlList}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{\_httpUrlList}{\_httpUrlList}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_url_list}{Http\+Url\+List}} Concord.\+C3\+Http\+Module.\+Web\+Server.\+\_\+http\+Url\+List = new \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_url_list}{Http\+Url\+List}}()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The list of Url and \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_response_buffer}{Http\+Response\+Buffer}}, basically it is a wrapper over Concurrent\+Dictionary. 
+
+
+
+Definition at line 33 of file Web\+Server.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_a9fcf48705c4fba563e06f29fbea6c803}\label{class_concord_1_1_c3_http_module_1_1_web_server_a9fcf48705c4fba563e06f29fbea6c803}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!\_listener@{\_listener}}
+\index{\_listener@{\_listener}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{\_listener}{\_listener}}
+{\footnotesize\ttfamily readonly Http\+Listener Concord.\+C3\+Http\+Module.\+Web\+Server.\+\_\+listener = new Http\+Listener()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Http\+Listener object, the backbone of the application!!! 
+
+
+
+Definition at line 25 of file Web\+Server.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_a95e1f65ea64f11e550fd2a8fd41614e3}\label{class_concord_1_1_c3_http_module_1_1_web_server_a95e1f65ea64f11e550fd2a8fd41614e3}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!\_logger@{\_logger}}
+\index{\_logger@{\_logger}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{\_logger}{\_logger}}
+{\footnotesize\ttfamily I\+Log Concord.\+C3\+Http\+Module.\+Web\+Server.\+\_\+logger = Log\+Manager.\+Get\+Logger(System.\+Reflection.\+Method\+Base.\+Get\+Current\+Method().Declaring\+Type)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+N\+L\+OG logger 
+
+
+
+Definition at line 53 of file Web\+Server.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_a2f1c06a69c766d913ac41c4e8a7a2c1b}\label{class_concord_1_1_c3_http_module_1_1_web_server_a2f1c06a69c766d913ac41c4e8a7a2c1b}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!\_port@{\_port}}
+\index{\_port@{\_port}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{\_port}{\_port}}
+{\footnotesize\ttfamily ushort Concord.\+C3\+Http\+Module.\+Web\+Server.\+\_\+port = \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_constants_a4790c1697961574b369f80040d3fa9da}{Constants.\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets a port to the listener, defaults to 8080 
+
+
+
+Definition at line 41 of file Web\+Server.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_a621c105d864049d0ff6cda39e1cc9dc6}\label{class_concord_1_1_c3_http_module_1_1_web_server_a621c105d864049d0ff6cda39e1cc9dc6}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!\_prefixes@{\_prefixes}}
+\index{\_prefixes@{\_prefixes}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{\_prefixes}{\_prefixes}}
+{\footnotesize\ttfamily List$<$string$>$ Concord.\+C3\+Http\+Module.\+Web\+Server.\+\_\+prefixes = new List$<$string$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+More Prefixes (url hosts) can be assigned to the listener. 
+
+
+
+Definition at line 110 of file Web\+Server.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_af7c99a81dca2bd0079d3e22fb247e297}\label{class_concord_1_1_c3_http_module_1_1_web_server_af7c99a81dca2bd0079d3e22fb247e297}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!\_responderMethod@{\_responderMethod}}
+\index{\_responderMethod@{\_responderMethod}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{\_responderMethod}{\_responderMethod}}
+{\footnotesize\ttfamily readonly Func$<$Http\+Listener\+Context, string$>$ Concord.\+C3\+Http\+Module.\+Web\+Server.\+\_\+responder\+Method\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The Method which responds to the Http\+Listener\+Context as the data, which need to be sent. 
+
+
+
+Definition at line 29 of file Web\+Server.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_a4119b37aad2d9713f2307bd854de122b}\label{class_concord_1_1_c3_http_module_1_1_web_server_a4119b37aad2d9713f2307bd854de122b}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!\_root@{\_root}}
+\index{\_root@{\_root}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{\_root}{\_root}}
+{\footnotesize\ttfamily string Concord.\+C3\+Http\+Module.\+Web\+Server.\+\_\+root = System.\+I\+O.\+Path.\+Get\+Directory\+Name(System.\+Reflection.\+Assembly.\+Get\+Executing\+Assembly().Location)\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Root Path for the app to store file. 
+
+
+
+Definition at line 49 of file Web\+Server.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_a1d7bbb290d534e300796f0cc3024ca53}\label{class_concord_1_1_c3_http_module_1_1_web_server_a1d7bbb290d534e300796f0cc3024ca53}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!\_scheme@{\_scheme}}
+\index{\_scheme@{\_scheme}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{\_scheme}{\_scheme}}
+{\footnotesize\ttfamily string Concord.\+C3\+Http\+Module.\+Web\+Server.\+\_\+scheme = \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_constants_ad5d0cf769b25bef58e712036c67b915b}{Constants.\+H\+T\+T\+P\+\_\+\+S\+C\+H\+E\+ME}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Set a scheme of the listener, defaults to http 
+
+
+
+Definition at line 37 of file Web\+Server.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_aac6507ed60e7bf9ac62740a84a4b1c70}\label{class_concord_1_1_c3_http_module_1_1_web_server_aac6507ed60e7bf9ac62740a84a4b1c70}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!\_server@{\_server}}
+\index{\_server@{\_server}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{\_server}{\_server}}
+{\footnotesize\ttfamily string Concord.\+C3\+Http\+Module.\+Web\+Server.\+\_\+server = \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_constants_a3fe72e8bc32c96064538c8af8199c478}{Constants.\+A\+L\+L\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+ES}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets host name for the listener, defaults to $\ast$. $\ast$ will assign all the interfaces to the listener. 
+
+
+
+Definition at line 45 of file Web\+Server.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_a9f3645e16eef4385e06108fbb0b3ad7a}\label{class_concord_1_1_c3_http_module_1_1_web_server_a9f3645e16eef4385e06108fbb0b3ad7a}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!\_uri@{\_uri}}
+\index{\_uri@{\_uri}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{\_uri}{\_uri}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_uri_builder}{Http\+Uri\+Builder}} Concord.\+C3\+Http\+Module.\+Web\+Server.\+\_\+uri =$>$ new \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_http_uri_builder}{Http\+Uri\+Builder}}() \{ \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a372194bcca0a119f079abe7f767dee71}{Scheme}} = \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a1d7bbb290d534e300796f0cc3024ca53}{\+\_\+scheme}}, Host = \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_aac6507ed60e7bf9ac62740a84a4b1c70}{\+\_\+server}}, Port = \mbox{\hyperlink{class_concord_1_1_c3_http_module_1_1_web_server_a2f1c06a69c766d913ac41c4e8a7a2c1b}{\+\_\+port}} \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Builds a Uri from the given properties 
+
+
+
+Definition at line 105 of file Web\+Server.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_adbb7b3ec87d6021801930c29b21e6ef5}\label{class_concord_1_1_c3_http_module_1_1_web_server_adbb7b3ec87d6021801930c29b21e6ef5}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!\_virualtLifeSpan@{\_virualtLifeSpan}}
+\index{\_virualtLifeSpan@{\_virualtLifeSpan}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{\_virualtLifeSpan}{\_virualtLifeSpan}}
+{\footnotesize\ttfamily long Concord.\+C3\+Http\+Module.\+Web\+Server.\+\_\+virualt\+Life\+Span = -\/1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Virtual U\+RL Life span local holder. 
+
+
+
+Definition at line 21 of file Web\+Server.\+cs.
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_ac38109b56ad34adee4a2a538c4101c98}\label{class_concord_1_1_c3_http_module_1_1_web_server_ac38109b56ad34adee4a2a538c4101c98}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!AllowBrowsing@{AllowBrowsing}}
+\index{AllowBrowsing@{AllowBrowsing}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{AllowBrowsing}{AllowBrowsing}}
+{\footnotesize\ttfamily bool Concord.\+C3\+Http\+Module.\+Web\+Server.\+Allow\+Browsing\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Flag to Allow Browsing, if it is set to false, all the calls should return error 403. 
+
+
+
+Definition at line 116 of file Web\+Server.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_a7f9d7208d0877507622dcfacbd3bcc97}\label{class_concord_1_1_c3_http_module_1_1_web_server_a7f9d7208d0877507622dcfacbd3bcc97}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!PortNumber@{PortNumber}}
+\index{PortNumber@{PortNumber}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{PortNumber}{PortNumber}}
+{\footnotesize\ttfamily ushort Concord.\+C3\+Http\+Module.\+Web\+Server.\+Port\+Number\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Sets a port to the listener, defaults to 8080 
+
+
+
+Definition at line 121 of file Web\+Server.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_a38a773f41d735c63da0fe09a5b6f08c2}\label{class_concord_1_1_c3_http_module_1_1_web_server_a38a773f41d735c63da0fe09a5b6f08c2}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!RootDirectory@{RootDirectory}}
+\index{RootDirectory@{RootDirectory}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{RootDirectory}{RootDirectory}}
+{\footnotesize\ttfamily string Concord.\+C3\+Http\+Module.\+Web\+Server.\+Root\+Directory\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Root directory of the module. 
+
+
+
+Definition at line 79 of file Web\+Server.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_a372194bcca0a119f079abe7f767dee71}\label{class_concord_1_1_c3_http_module_1_1_web_server_a372194bcca0a119f079abe7f767dee71}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!Scheme@{Scheme}}
+\index{Scheme@{Scheme}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{Scheme}{Scheme}}
+{\footnotesize\ttfamily string Concord.\+C3\+Http\+Module.\+Web\+Server.\+Scheme\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Scheme of the listener, defaults to http. 
+
+
+
+Definition at line 151 of file Web\+Server.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_a9a5def732b3afd8530271b7a8de16591}\label{class_concord_1_1_c3_http_module_1_1_web_server_a9a5def732b3afd8530271b7a8de16591}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!ServerAddress@{ServerAddress}}
+\index{ServerAddress@{ServerAddress}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{ServerAddress}{ServerAddress}}
+{\footnotesize\ttfamily string Concord.\+C3\+Http\+Module.\+Web\+Server.\+Server\+Address\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Property for server name/hostname. Defaults to $\ast$. $\ast$ will assign all the interfaces to the listener. 
+
+
+
+Definition at line 136 of file Web\+Server.\+cs.
+
+\mbox{\Hypertarget{class_concord_1_1_c3_http_module_1_1_web_server_ac992bf483d0f40c39532bb3b320f2a75}\label{class_concord_1_1_c3_http_module_1_1_web_server_ac992bf483d0f40c39532bb3b320f2a75}} 
+\index{Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}!VirtualURLLifeSpan@{VirtualURLLifeSpan}}
+\index{VirtualURLLifeSpan@{VirtualURLLifeSpan}!Concord.C3HttpModule.WebServer@{Concord.C3HttpModule.WebServer}}
+\subsubsection{\texorpdfstring{VirtualURLLifeSpan}{VirtualURLLifeSpan}}
+{\footnotesize\ttfamily long Concord.\+C3\+Http\+Module.\+Web\+Server.\+Virtual\+U\+R\+L\+Life\+Span\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Default timeout applied to all U\+R\+Ls. If they are set with no timeout – that timeout applies instead. Using timeout of ‘-\/1’ triggers usage of the configured default timeout. 
+
+
+
+Definition at line 58 of file Web\+Server.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_web_server_8cs}{Web\+Server.\+cs}}\end{DoxyCompactItemize}

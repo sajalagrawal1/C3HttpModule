@@ -1,0 +1,5 @@
+<map id="Concord.C3HttpModule.HttpResponseBuffer.ExtendExpiryTime" name="Concord.C3HttpModule.HttpResponseBuffer.ExtendExpiryTime">
+<area shape="rect" id="node1" title="Called from PokeUrlWithExpiry. Extends expiry time of the object by &#39;seconds&#39;. Also,..." alt="" coords="240,39,463,80"/>
+<area shape="rect" id="node2" href="$class_concord_1_1_c3_http_module_1_1_web_server.html#ad3121bff4e1aeaeb05a5f1636d1e7d65" title="Updates the Expiry of a url and updates TimeOut of the HttpResponseBuffer." alt="" coords="5,5,192,47"/>
+<area shape="rect" id="node3" href="$class_concord_1_1_c3_http_module_1_1_web_server.html#ad58516396d74972ad8f1005c889e1379" title="Updates the Expiry of a url, by already given TimeOut parameter." alt="" coords="5,71,192,112"/>
+</map>
